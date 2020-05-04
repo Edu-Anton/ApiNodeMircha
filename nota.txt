@@ -1,0 +1,10 @@
+1. En la función postCountries se da un comportamiento extraño porque cuando hago referencia al file countries.json, me funciona haciendo referencia al mismo nivel. Una suposición es que como es una variable interna de la función, recién se activa a partir de la posición del que la ejecuta, en este caso quien ejecuta es el archivo router. 
+
+2. Se puede considerar como una clausula o restricción del sistema el hecho de darle la propiedad a un campo de un modelo como unique para que la base de datos no admita que se dupliquen en un futuro ciertos valores. Entonces, si por error vuelvo a ejecutar la ruta que cargaba ciertos datos, la base de datos responda con que ya no es posible.
+
+3. En el método del controlador de countries, getMarathons, se observa un error cuando se hace un llamado porque devuelve un estado 200 y un array vacío. Mircha había programado que cuando no hallan datos, se responda con un 404 algo que no es adecuado, porque eso debería manerjarse para las URI que no existen. 
+
+4. Clasificación de errores
+- Contenido no permitido (403)
+- Contenido inexistente (404)
+- Envío exitoso (200) 
